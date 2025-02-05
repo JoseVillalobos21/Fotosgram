@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ username }}'s Story</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="story-content">
+  <!-- Mostrar la historia en grande -->
+  <div class="story-container">
+    <img [src]="contentUrl" class="story-content-img" />
+  </div>
+
+  <!-- Parte inferior con botones de interacción -->
+  <div class="story-actions">
+    <div class="story-actions-left">
+      <ion-icon name="heart-outline" class="story-action-icon"></ion-icon>
+      <ion-icon name="chatbubble-outline" class="story-action-icon"></ion-icon>
+      <ion-icon name="paper-plane-outline" class="story-action-icon"></ion-icon>
+    </div>
+    <div class="story-actions-right">
+      <ion-icon name="ellipsis-horizontal-outline" class="story-action-icon"></ion-icon>
+    </div>
+  </div>
+
+  <!-- Parte superior con nombre de usuario y avatar -->
+  <div class="story-user-info">
+    <ion-avatar>
+      <img [src]="avatarUrl" />
+    </ion-avatar>
+    <span class="story-username">{{ username }}</span>
+  </div>
+</ion-content>

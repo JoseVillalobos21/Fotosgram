@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Instagram
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Sección de Estados (arriba) -->
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Estados</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="states-scroll">
+    <ion-list class="ion-list-stories">
+      <app-storie 
+        *ngFor="let post of posts; let i = index" 
+        [username]="post.username" 
+        [avatarUrl]="post.avatarUrl"
+        (click)="openStoryView(post)"
+        >
+        
+        <!-- Icono '+' solo para el primer item -->
+        <ion-icon *ngIf="i === 0" name="add-circle-outline" class="plus-icon"></ion-icon>
+  
+      </app-storie>
+    </ion-list>
+  </div>
+  
+  <!-- Lista de publicaciones -->
+  <app-layout>
+    <ion-list>
+      <app-card-post *ngFor="let post of posts; trackBy: trackByFn"
+      [username]="post.username"
+      [location]="post.location"
+      [createAt]="post.createAt"
+      [avatarUrl]="post.avatarUrl"
+      [contentUrl]="post.contentUrl"
+      [liked]="post.liked"
+      [saved]="post.saved"
+      [likes]="post.likes"
+      [description]="post.description"
+      [comments]="post.comments">
+      </app-card-post>
+    </ion-list>
+  </app-layout>
+</ion-content>

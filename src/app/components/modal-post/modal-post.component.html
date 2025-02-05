@@ -1,0 +1,40 @@
+<ion-icon id="open-modal" name="ellipsis-vertical-sharp"></ion-icon>
+
+<ion-modal trigger="open-modal" [initialBreakpoint]="0.6" [breakpoints]="[0, 1]">
+  <ng-template>
+    <div class="modal-content">
+      <!-- Grid con dos opciones en la parte superior -->
+      <div class="options-grid">
+        <button class="option-btn-col">
+          <ion-icon name="bookmark-outline"></ion-icon>
+          Guardar
+        </button>
+        <button class="option-btn-col">
+          <ion-icon name="qr-code-outline"></ion-icon>
+          Código QR
+        </button>
+      </div>
+
+      <!-- Lista de opciones en una sola columna -->
+      <div class="single-option">
+        <button class="option-btn"> <ion-icon name="star-outline"></ion-icon> Agregar a favoritos </button>
+      </div>
+      <div class="single-option">
+        <button class="option-btn"> <ion-icon name="person-remove-outline"></ion-icon> Dejar de seguir </button>
+      </div>
+      <div class="single-option">
+        <button class="option-btn"> <ion-icon name="information-circle-outline"></ion-icon> ¿Por qué ves esta publicación? </button>
+      </div>
+      <div class="single-option">
+        <button class="option-btn"> <ion-icon name="eye-off-outline"></ion-icon> Ocultar </button>
+      </div>
+      <div class="single-option">
+        <button class="option-btn"> <ion-icon name="person-circle-outline"></ion-icon>Información sobre esta cuenta </button>
+      </div>
+      <div class="single-option">
+        <button class="option-btn danger"> <ion-icon name="alert-circle-sharp"></ion-icon> Reportar </button>
+      </div>
+
+    </div>
+  </ng-template>
+</ion-modal>

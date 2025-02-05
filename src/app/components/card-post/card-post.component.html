@@ -1,0 +1,70 @@
+<ion-card>
+  <ion-item>
+    <ion-avatar aria-hidden="true" slot="start">
+      <img alt="" [src]="avatarUrl" />
+    </ion-avatar>
+    <ion-label>
+      <strong>{{username}}</strong> • {{createAt}}
+      <br>
+      <ion-note>
+        {{location}}
+      </ion-note>
+    </ion-label>
+
+     <app-modal-post></app-modal-post>
+    
+  </ion-item>
+  <img alt="Silhouette of mountains" [src]="contentUrl" />
+  
+  <ion-item class="ion-no-padding">
+    <ion-buttons slot="start">
+      <!-- Botón de like -->
+      <ion-icon
+  [name]="liked ? 'heart' : 'heart-outline'"
+  [ngStyle]="{ 'color': liked ? 'red' : 'black' }"
+  (click)="toggleLike()"
+  style="transform:scale(0.9)"
+  size="large">
+</ion-icon>
+
+      <ion-label>
+        {{ likes }}
+      </ion-label>
+    
+      <!-- Botón de comentarios -->
+      <ion-icon 
+        style="transform:scale(0.8)" 
+        size="large" 
+        name="chatbubble-outline">
+      </ion-icon>
+      <ion-label>
+        {{ comments }}
+      </ion-label>
+    
+      <!-- Botón de compartir -->
+      <ion-icon 
+        style="transform:scale(0.7)" 
+        size="large" 
+        name="paper-plane-outline">
+      </ion-icon>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <!-- Botón de marcador -->
+      <ion-icon 
+        size="large" 
+        [ngStyle]="{ 'color': saved ? '#d2b202' : 'black' }"
+        [name]="saved ? 'bookmark' : 'bookmark-outline'  " 
+        (click)="toggleSave()">
+      </ion-icon>
+    </ion-buttons>
+    
+  </ion-item>
+
+    <ion-item class="ion-no-padding">
+      <ion-label>
+      <strong> {{username}} </strong>{{description}} 
+      </ion-label>
+    </ion-item>
+    
+</ion-card>

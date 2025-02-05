@@ -1,0 +1,31 @@
+.states-scroll {
+    display: flex; /* Alinea los elementos horizontalmente */
+    overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    padding: 10px 0; /* Espaciado vertical */
+    white-space: nowrap; /* Evita el salto de línea */
+  }
+  
+  /* Asegura que ion-list se vea como un contenedor en línea */
+  .ion-list-stories {
+    display: flex; /* Flexbox para alinear horizontalmente */
+    padding: 0; /* Elimina el padding por defecto */
+  }
+  
+  /* Asegura que los elementos de las historias tengan espacio entre sí */
+  app-storie {
+    margin-right: -15px; /* Espaciado entre las historias */
+  }
+
+  .plus-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para resaltar el icono */
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+
+  

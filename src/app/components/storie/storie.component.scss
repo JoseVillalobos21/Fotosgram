@@ -1,0 +1,24 @@
+.avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el avatar y el label */
+    justify-content: center; /* Centra el contenido verticalmente */
+  }
+  
+  .storie-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background-image: linear-gradient(45deg, #feda75, #ec7b47, #d62976, #962fbf);
+    background-origin: border-box;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+    overflow: hidden;
+  }
+  
+  .state-label {
+    text-align: center; /* Centra el texto del label */
+    font-size: 12px;
+    margin-top: 5px; /* Un pequeño margen para separar el label del avatar */
+  }
+  

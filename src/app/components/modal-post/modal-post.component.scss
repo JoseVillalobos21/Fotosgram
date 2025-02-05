@@ -1,0 +1,91 @@
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Dos columnas para las opciones de arriba
+    gap: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .single-option {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .single-option:last-child {
+    border-bottom: none;
+  }
+  
+  .option-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  
+    ion-icon {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
+  
+  .danger {
+    color: #ed4956; // Rojo de Instagram
+  }
+  
+  .close-option {
+    margin-top: 10px;
+  }
+  
+  .close-btn {
+    font-weight: bold;
+    text-align: center;
+  }
+  ::part(backdrop) {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  }
+  
+  ion-modal {
+    --border-radius: 40px 40px 0 0; /* Bordes redondeados arriba */
+  
+  }
+  .option-btn-col{
+    display: flex;
+    justify-content: center;  /* Centrado de los elementos para los primeros botones */
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    
+    ion-icon {
+        margin-right: 10px;
+        font-size: 22px;
+      }
+      
+}
+
+  
